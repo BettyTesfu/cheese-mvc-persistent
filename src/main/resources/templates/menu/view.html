@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
@@ -36,7 +37,9 @@
 
         </table>
 
-        <p><a th:href="'/menu/add-item/' + ${menu.id}" >Add Menu Item</a></p>
+        <p th:unless="${cheeses.size()}"><i>No cheeses yet</i></p>
+
+        <p><a th:href="'/menu/add-item/' + ${menu.id}" >Add Cheese</a></p>
 
     </body>
 
